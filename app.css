@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+  /*change favorite color*/
+  --hue-color: 250;
+  /* purple 250 - Green 142 - blue 230 - pink 340 */
+  /*========== Colors ==========*/
+  --first-color: #324C5C;
+  --first-color-second: #231942;
+  --first-color-second-light: #ded2ff;
+  --text-color: #2F4858;
+  --text-color-light: #bbbcc0;
+  --text-color-light2: #343A40;
+  --body-color: #ECECEC;
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  /*========== Font and typography ==========*/
+  --body-font: 'Montserrat Alternates', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== Margins Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: var(--font-regular);
+  line-height: 1rem;
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+span {
+  color: var(--text-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+
+ol {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.9rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+
+/* ========== NAV =========== */
+
+.header {
+  background-color: var(--body-color);
+  height: 6.2rem;
+  width: 100%;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0 6.2rem;
+}
+
+.logo {
+  width: 15rem;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  padding-left: 4rem;
+  font-size: 2rem;
+}
+
+.lang h3 {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.lang i {
+  font-size: 3rem;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.search {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 54rem;
+}
+
+.search-icon {
+  position: relative;
+  top: 0;
+  left: 3rem;
+  border: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: var(--body-color);
+  width: 20px;
+  border-radius: 50rem;
+  border: 2px dashed var(--first-color-second);
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+  width: 100%;
+}
+
+/* ====== MAIN ======= */
+.main {
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+}
+.slideshow-container {
+  width: 80vw;
+  margin: 0 auto;
+  height: 60vh;
+  max-width: 80rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.myslider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  text-align: center;
+}
+
+.myslider[data-active] {
+  opacity: 1;
+  z-index: var(--z-modal);
+  transition-delay: 0ms;
+}
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+}
+
+.btn {
+  border-radius: 10rem;
+  outline: none;
+  padding: 0.6rem;
+  background-color: var(--text-color-light);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.active, .btn:hover {
+  background-color: var(--first-color-second);
+  color: white;
+}
+
+.prevBtn,
+.nextBtn {
+  font-size: 1.75rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  transition: var(--transition);
+}
+.btn-num{
+  text-align: center;
+  font-size: 1.75rem;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+

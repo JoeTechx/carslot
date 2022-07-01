@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CarSlot</title>
+        <!-- ===================== UNICONS ========================= -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <!-- ===================== CSS ========================= -->
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <!-- =========== HEADER =============== -->
+        <header class="header">
+            <nav class="nav">
+                <img src="./image/logo.png" alt="logo" class="logo">
+                <div class="lang">
+                    <h3>Eng</h3>
+                    <i class="uil uil-angle-double-down"></i>
+                </div>
+                <div class="search">
+                    <form>
+                        <div class="search-icon">
+                            <i class="uil uil-search-alt"></i>
+                        </div>
+                        <input type="text" name="search" placeholder="search...">
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <!-- ================ MAIN ================== -->
+        <main class="main">
+
+            <!-- ============== slideshow ================== -->
+            <section class="slideshow-container" data-slides>
+                <div class="myslider fade" data-active>
+                    <div class="text">
+                        <h1 class="title">$ 1,500,450</h1>
+                        <p class="subtitle">Sant'Agata Bolognese</p>
+                    </div>
+                    <img src="./image/car 1.png" alt="" class="car-1">
+                </div>
+                <div class="myslider fade">
+                    <div class="text">
+                        <h1 class="title">$ 1,700,450</h1>
+                        <p class="subtitle">Sant'Agata Bolognese</p>
+                    </div>
+                    <img src="./image/lamborghini-aventador 1.png" alt="" class="car-1">
+                </div>
+            </section>
+            <div class="btn-container">
+                <i class="uil uil-arrow-up icon-up btn prevBtn" data-carousel-button="prevBtn"></i>
+                <div class="btn-num">
+                    <p class=" prevBtnnum">01</p>
+                    <p class=" num">02</p>
+                </div>
+                <i class="uil uil-arrow-down icon-down  btn nextBtn active" data-carousel-button="nextBtn"></i>
+            </div>
+        </main>
+        <!-- =============== FOOTER ====================== -->
+
+        <!-- =============== JAVASCRIPT ====================== -->
+        <script src="app.js"></script>
+    </body>
+
+</html>
