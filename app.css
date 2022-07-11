@@ -10,10 +10,12 @@
   --first-color-second: #231942;
   --first-color-second-light: #ded2ff;
   --text-color: #2F4858;
+  --text-color2: #343A40;
   --text-color-light: #bbbcc0;
   --text-color-light2: #343A40;
   --body-color: #ECECEC;
   --container-color: #fff;
+  --border-color: #6C757D;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   /*========== Font and typography ==========*/
@@ -51,7 +53,9 @@
 }
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -122,6 +126,7 @@ p {
 }
 
 .nav {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 6.2rem;
@@ -154,7 +159,7 @@ p {
   font-size: 2.5rem;
   display: flex;
   align-items: center;
-  margin-left: 54rem;
+  margin-left: 50%;
 }
 
 .search-icon {
@@ -176,10 +181,10 @@ input {
   border: 2px dashed var(--first-color-second);
   cursor: pointer;
   outline: none;
-  font-size: 16px;
+  font-size: 13px;
   padding: 12px 20px 12px 40px;
   -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 input:focus {
@@ -191,28 +196,49 @@ input:focus {
   min-height: 100vh;
   display: flex;
   place-items: center;
+  transition: 1s ease-out;
 }
+
 .container {
-  width: 80vw;
+  width: 98%;
   margin: 0 auto;
   height: 60vh;
   position: relative;
+  transition: 1s ease-out;
 }
 
-.car {
-  position: absolute;
-  width: 90%;
-  height: 70%;
-}
-.car-1 {
+.img-car {
+  position: relative;
+  flex-wrap: initial;
   width: 100%;
   height: 100%;
-  margin: 0 10%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  transition: 1s ease-out;
+  overflow: hidden;
 }
 
-.title {
+.cars {
+  width: 97%;
+  height: 100%;
+  margin: 0 10%;
+  transition: 1s ease-out;
+}
+
+.lambo {
+  height: 80%;
+}
+
+.cars {
+  display: none;
+}
+
+.show {
+  display: block;
+  transition: 1s ease-in-out;
+}
+
+.price {
   font-size: 3rem;
 }
 
@@ -228,42 +254,157 @@ input:focus {
   background-color: var(--text-color-light);
   cursor: pointer;
   font-size: 18px;
+
 }
 
-.active, .btn:hover {
+.active,
+.btn:hover {
   background-color: var(--first-color-second);
   color: white;
 }
 
-.prevBtn,
-.nextBtn {
+.icon-up,
+.icon-down {
   font-size: 1.75rem;
   cursor: pointer;
-  margin: 0 0.25rem;
-  transition: var(--transition);
+  margin: 0 9rem;
 }
-.btn-num{
-  text-align: center;
-  font-size: 1.75rem;
-}
-/* .nextBtnnum{
+
+.icon-left,
+.icon-right {
   display: none;
-} */
+}
+
+.number {
+  text-align: center;
+  margin: 3.5rem 0;
+}
 
 /* Fading animation */
-/* .fade {
+.fade {
   animation-name: fade;
   animation-duration: 1.5s;
+  transition: 1s ease-out;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-} */
+  from {
+    opacity: 0.4
+  }
 
+  to {
+    opacity: 1
+  }
+}
 
+/* ========== FOOTER =========== */
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 3px solid var(--border-color);
+  background-color: var(--text-color-light);
+}
 
+.footer div,
+h2,
+button {
+  margin-top: 1rem;
+  color: #000;
+}
 
+.footer h2 {
+  font-size: 2rem;
+}
 
+.footer p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color2);
+}
 
+.model {
+  border: none;
+  border-bottom: 3px solid var(--border-color);
+  border-radius: 0;
+}
 
+.model:hover {
+  background-color: transparent;
+  color: var(--text-color);
+  transform: translateX(5%)
+}
+
+/* ======= MEDIA QUERY ==========  */
+
+@media screen and (max-width: 350px) {
+  .nav {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .search {
+    margin-left: 20%;
+    margin-top: 1rem;
+  }
+
+  .main {
+    display: block;
+    place-items: center;
+    margin: 4rem auto;
+  }
+
+  .container {
+    margin: 3rem auto;
+    position: relative;
+  }
+
+  .price {
+    font-size: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    padding-top: 0.4rem;
+    padding-left: 3rem;
+  }
+
+  .img-car {
+    width: 100%;
+    height: 60%;
+    margin-top: 7rem;
+  }
+
+  .cars {
+    width: 100%;
+    height: 50%;
+    margin: auto 10%;
+    transition: 1s ease-out;
+  }
+
+  .lambo {
+    height: 60%;
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-up,
+  .icon-down {
+    transform: rotate(-90deg);
+  }
+
+}
