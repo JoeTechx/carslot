@@ -307,6 +307,13 @@ input:focus {
   background-color: var(--text-color-light);
 }
 
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
 .footer div,
 h2,
 button {
@@ -381,13 +388,14 @@ button {
 
   .img-car {
     width: 100%;
-    height: 60%;
-    margin-top: 7rem;
+    height: 100%;
+    margin-top: 20%;
+    /* background-color: #fff; */
   }
 
   .cars {
     width: 100%;
-    height: 50%;
+    height: 80%;
     margin: auto 10%;
     transition: 1s ease-out;
   }
@@ -407,4 +415,49 @@ button {
     transform: rotate(-90deg);
   }
 
+  .footer {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: none;
+    background-color: var(--body-color);
+  }
+
+  .footer-text {
+    gap: 2rem;
+  }
+
+  .footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .footer h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .model {
+    border-radius: 10rem;
+    border-color: transparent;
+    outline: none;
+    padding: 0.6rem 7rem;
+    background-color: var(--first-color-second);
+    color: var(--container-color);
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
 }

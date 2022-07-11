@@ -25,8 +25,6 @@ const nextImage = (e) => {
         }
     } else {
         if (index == 0) {
-
-        
             index = length - 1;
             numbers.innerHTML = `0${index + 1}`;
             priceHeading.innerHTML = `${price[index]}`;
