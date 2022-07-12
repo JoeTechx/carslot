@@ -248,9 +248,9 @@ input:focus {
 }
 
 .btn {
-  border-radius: 10rem;
+  border-radius: 50%;
   outline: none;
-  padding: 0.6rem;
+  padding: 1.5rem 0.9rem;
   background-color: var(--text-color-light);
   cursor: pointer;
   font-size: 18px;
@@ -460,4 +460,312 @@ button {
     font-weight: 600;
     margin-bottom: 3rem;
   }
+}
+
+@media screen and (min-width: 358px) {
+  .nav {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .search {
+    margin-left: 30%;
+    margin-top: 1rem;
+  }
+
+  .main {
+    display: block;
+    place-items: center;
+    margin: 4rem auto;
+  }
+
+  .container {
+    margin: 3rem auto;
+    position: relative;
+  }
+
+  .price {
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    padding-top: 0.4rem;
+    padding-left: 3rem;
+  }
+
+  .img-car {
+    width: 100%;
+    height: 100%;
+    margin-top: 20%;
+    /* background-color: #fff; */
+  }
+
+  .cars {
+    width: 100%;
+    height: 60%;
+    max-width: 120%;
+    margin: auto 10%;
+    transition: 1s ease-out;
+  }
+
+  .lambo {
+    height: 60%;
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-up,
+  .icon-down {
+    transform: rotate(-90deg);
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: none;
+    background-color: var(--body-color);
+  }
+
+  .footer-text {
+    gap: 2rem;
+  }
+
+  .footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .footer h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer p {
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+
+  .model {
+    border-radius: 10rem;
+    border-color: transparent;
+    outline: none;
+    padding: 0.6rem 7rem;
+    background-color: var(--first-color-second);
+    color: var(--container-color);
+    cursor: pointer;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  .model i {
+    display: none;
+  }
+
+  .model:hover {
+    background-color: var(--first-color);
+  }
+}
+
+@media screen and (min-width: 558px) {
+  .lang {
+    display: flex;
+  }
+
+  .search {
+    margin-left: 15%;
+  }
+
+  .footer {
+    top: 110%;
+  }
+  .img-car {
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+    /* background-color: #fff; */
+  }
+}
+
+@media screen and (min-width: 758px) {
+  .logo {
+    width: 14rem;
+  }
+
+  .search {
+    margin-left: 16%;
+  }
+
+  .price {
+    font-size: 3rem;
+    padding-left: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  padding-left: 3rem;
+  }
+
+  .img-car {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    /* background-color: #fff; */
+  }
+}
+@media screen and (min-width: 858px) {
+ .search {
+    margin-left: 29%;
+  }
+
+  .img-car {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    /* background-color: #fff; */
+  }
+
+  .cars {
+    width: 100%;
+    height: 100%;
+    max-width: 120%;
+    margin: auto 10%;
+    transition: 1s ease-out;
+  }
+
+  .lambo {
+    height: 60%;
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-up,
+  .icon-down {
+    transform: rotate(-90deg);
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 3px solid var(--border-color);
+    background-color: var(--text-color-light);
+  }
+  
+  .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+  }
+  
+  .footer div,
+  h2,
+  button {
+    margin-top: 1rem;
+    color: #000;
+  }
+  
+  .footer h2 {
+    font-size: 2rem;
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color2);
+  }
+  
+  .model {
+    border: none;
+    border-bottom: 3px solid var(--border-color);
+    border-radius: 0;
+  }
+  
+  .model:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    transform: translateX(5%)
+  }
+  
+  /* .footer {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: none;
+    background-color: var(--body-color);
+  }
+
+  .footer-text {
+    gap: 2rem;
+  }
+
+  .footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .footer h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer p {
+    font-size: 0.98rem;
+    font-weight: 600;
+  }
+
+  .model {
+    border-radius: 10rem;
+    border-color: transparent;
+    outline: none;
+    padding: 0.6rem 7rem;
+    background-color: var(--first-color-second);
+    color: var(--container-color);
+    cursor: pointer;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  .model i {
+    display: none;
+  }
+
+  .model:hover {
+    background-color: var(--first-color);
+  } */
+  
 }
