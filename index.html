@@ -66,7 +66,7 @@
                     </div>
                     <div class="millage">
                         <h2 id="millage">10,000</h2>
-                        <p>millage</p>
+                        <p>mileage</p>
                     </div>
                     <div class="Lamborghini">
                         <h2>Lamborghini</h2>
@@ -74,20 +74,20 @@
                     </div>
                 </div>
                 <div class="modal-container">
-                <button class="btn model">
+                <button type="submit" class="btn model" onclick="openPopup()">
                     full details
                     <i class="uil uil-arrow-right"></i>
                 </button>
 
-                <div class="popup">
-                    <button class="close-btn">
+                <div class="popup" id="popup">
+                    <button type="button"class="close-btn" onclick="closePopup()">
                         <i class="uil uil-times"></i>
                     </button>
                    <h2>Name: lamborghini-aventador</h2> 
                    <h2>Year: 2021</h2> 
-                   <h2>Millage: 10,000</h2> 
+                   <h2 id="mileage">Mileage: 10,000</h2> 
                    <h2>Class: A-Class 2021</h2> 
-                   <h2>H.p: 20,000Hp</h2> 
+                   <h2 id="horse-power">Horse power: 20,000Hp</h2> 
                 </div>
             </div>
             </div>

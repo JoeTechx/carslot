@@ -222,7 +222,7 @@ input:focus {
   width: 97%;
   height: 100%;
   margin: 0 10%;
-  transition: 1s ease-out;
+  transition: 2s ease-in;
 }
 
 .lambo {
@@ -235,7 +235,7 @@ input:focus {
 
 .show {
   display: block;
-  transition: 1s ease-in-out;
+  transition:0.2ms ease-in;
 }
 
 .price {
@@ -353,6 +353,7 @@ button {
   border-radius: 10rem;
 }
 
+
 .popup {
   width: 400px;
   background-color: rgb(205, 204, 204);
@@ -361,13 +362,18 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0 30px 30px;
+  transform: translate(-50%, -50%)scale(0.1);
+  padding: 0 30px 30px;  
   color: #333;
-  margin: 50% auto;
-  /* display: none; */
+  margin: 50% auto;  
+  visibility: hidden; 
+  transition: 1s cubic-bezier(.47,-0.79,0,1.87);; 
 }
 
+.open-popup{
+  visibility: visible;
+  transform: translate(-50%,-50%)scale(1);
+}
 .popup h2 {
   font-size: 20px;
   font-weight: 500;
@@ -522,7 +528,7 @@ button {
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     padding: 0 30px 30px;
     color: #333;
     margin: auto;
@@ -695,7 +701,7 @@ button {
     position: absolute;
     top: -60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     padding: 0 30px 30px;
     color: #333;
     margin: auto;
@@ -737,10 +743,12 @@ button {
     height: 100%;
     margin-top: 8%;
   }
-.cars{
-  width: 90%;
-  height: 60%;
-}
+
+  .cars {
+    width: 90%;
+    height: 60%;
+  }
+
   .model {
     margin: 0 35%;
   }
@@ -855,6 +863,7 @@ button {
   }
 
   .footer-container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -864,13 +873,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20rem;
+    gap: 15rem;
     margin-left: 8rem;
   }
 
   .footer div,
   h2,
-  button { 
+  button {
     color: #000;
   }
 
@@ -884,7 +893,7 @@ button {
     color: var(--text-color2);
   }
 
-   .model {
+  .model {
     border-color: transparent;
     outline: none;
     border-radius: 0;
@@ -893,9 +902,8 @@ button {
     color: #000;
     display: flex;
     align-items: center;
-    padding: 0.8rem 1rem;
-     margin: 0 8rem;
-    margin-right: 13rem;
+    padding: 0.8rem 0.9rem;
+    margin: 0 5rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -924,7 +932,7 @@ button {
     position: absolute;
     top: -350%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     padding: 0 30px 30px;
     color: #333;
     margin: auto;
@@ -947,4 +955,52 @@ button {
     cursor: pointer;
   }
 
-} 
+}
+
+@media screen and (min-width: 1200px) {
+  .search {
+    margin-left: 40%;
+  }
+
+  .cars {
+    width: max-content;
+  }
+
+  .lambo {
+    width: max-content;
+  }
+
+  .popup {
+    top: -370%;
+  }
+}
+
+@media screen and (min-width: 1348px) {
+  .search {
+    margin-left: 50%;
+  }
+
+  .cars {
+    width: max-content;
+  }
+
+  .lambo {
+    width: max-content;
+  }
+
+  .btn-container {
+    bottom: 470%;
+  }
+
+  .popup {
+    top: -470%;
+  }
+
+  .footer-text {
+    gap: 15rem;
+  }
+
+  .footer-container {
+    justify-content: space-evenly;
+  }
+}

@@ -6,9 +6,15 @@ let index = 0;
 const length = images.length;
 const numbers = document.getElementById("number");
 const price = ['$1,500,450', '$1,700,450'];
-const priceHeading = document.getElementById("price")
+const priceHeading = document.getElementById("price");
 const millage = ['10,000', '12,000'];
-const millageHeading = document.getElementById("millage")
+const millageHeading = document.getElementById("millage");
+const popupBg = ['rgb(205, 204, 204)', ' #5d5c61']
+const popup = document.getElementById("popup");
+const mileage = ['mileage: 10,000', 'mileage: 12,000'];
+const mileageHeading = document.getElementById("mileage");
+const horsepower = ['Horse power: 20,000Hp', 'Horse power: 30,000Hp',];
+const horsepowerHeading = document.getElementById("horse-power");
 
 const nextImage = (e) => {
     // console.log(e);
@@ -17,11 +23,15 @@ const nextImage = (e) => {
         numbers.innerHTML = `0${index + 1}`;
         priceHeading.innerHTML = `${price[index]}`;
         millageHeading.innerHTML = `${millage[index]}`;
+        mileageHeading.innerHTML = `${mileage[index]}`;
+        horsepowerHeading.innerHTML = `${horsepower[index]}`;
         if (index == length) {
             index = 0;
             numbers.innerHTML = `0${index + 1}`;
             priceHeading.innerHTML = `${price[0]}`;
             millageHeading.innerHTML = `${millage[0]}`;
+            mileageHeading.innerHTML = `${mileage[0]}`;
+            horsepowerHeading.innerHTML = `${horsepower[0]}`;
         }
     } else {
         if (index == 0) {
@@ -29,11 +39,15 @@ const nextImage = (e) => {
             numbers.innerHTML = `0${index + 1}`;
             priceHeading.innerHTML = `${price[index]}`;
             millageHeading.innerHTML = `${millage[index]}`;
+            mileageHeading.innerHTML = `${mileage[index]}`;
+            horsepowerHeading.innerHTML = `${horsepower[index]}`;
         } else {
             index--;
             numbers.innerHTML = `0${index + 1}`;
             priceHeading.innerHTML = `${price[index]}`;
             millageHeading.innerHTML = `${millage[index]}`;
+            mileageHeading.innerHTML = `${mileage[index]}`;
+            horsepowerHeading.innerHTML = `${horsepower[index]}`;
         }
     }
     for (let i = 0; i < length; i++) {
@@ -52,9 +66,12 @@ next.addEventListener('click', () => {
     nextImage('nextBtn');
 })
 
-
-
-
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
 
 
 
